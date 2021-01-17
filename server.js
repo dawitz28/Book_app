@@ -3,6 +3,7 @@
 // DEPENDENCIES
 const express = require('express');
 require('dotenv').config();
+const superagent = require('superagent');
 
 // START APPLICATION
 const app = express();
@@ -15,10 +16,10 @@ app.get('/', homeHandler);
 app.post('/contact', contactHandler);
 app.post('/searches', createSearch);
 
-// CATCH ALL
+// CATCH-ALL
 app.get('*', (request, response) => response.status(404).send('This route does not exist'));
 
-// HANDLERS FUNCTIONS
+// HANDLER FUNCTIONS
 function homeHandler(request, response) {
   response.status(200).sendFiles('./index.html');
 }
@@ -41,8 +42,15 @@ function createSearch(request, response) {
   superagent.get(url)
   .then(apiResponse => apiResponse.body.items.map(bookResult => new Book(bookResult.volumeInfo)))
   .then(results => response.render('pages/show', { searchResults: results }));
-
 }
+
+// CONSTRUCTORS
+function Book(info) {
+  const placeholderImage = 'https://i.imgur.com/J5LVHEL.jpg';
+
+  this.title = info.title || 'No title available';
+}
+
 
 // PORT LISTEN
 app.listen(PORT, () => console.log(`now listening on port ${PORT}`));
