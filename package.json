@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+<<<<<<< HEAD
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+=======
+>>>>>>> f7d5069e994a51a5ebc02b7ad2820d429fd01223
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -17,9 +25,13 @@
   "bugs": {
     "url": "https://github.com/dawitz28/Book_app/issues"
   },
+<<<<<<< HEAD
+  "homepage": "https://github.com/dawitz28/Book_app#readme"
+=======
   "homepage": "https://github.com/dawitz28/Book_app#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1"
   }
+>>>>>>> f7d5069e994a51a5ebc02b7ad2820d429fd01223
 }
