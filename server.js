@@ -60,8 +60,8 @@ function handleError(res){
 function Book(data) {
   this.title = data.volumeInfo.title;
   this.author = data.volumeInfo.authors;
-  this.description = data.volumeInfo.description || '*** Description current unavailable ***';
-  this.thumbnail = data.volumeInfo.imageLinks.thumbnail || null;
+  this.description = data.volumeInfo.description;
+  this.thumbnail = data.volumeInfo.imageLinks.thumbnail;
 }
 
 // PORT LISTENING
