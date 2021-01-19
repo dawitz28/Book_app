@@ -1,112 +1,22 @@
-/* RESULTS */
-#results {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 960px;
-  margin: auto;
-}
-
-#results nav {
-  display: flex;
-  color: white;
-  background-color: black;
-}
-
-#results h1, #results #menu {
-  height: 100px;
-  line-height: 100px;
-  font-size: 40px;
-  background-color: black;
-  color: white;
-  text-align: center;
-}
-
-#results h1 {
-  flex-grow: 2;
-  text-align: 30px;
-  padding-left: 30px;
-}
-
-#results #menu {
-  text-align: right;
-  padding-right: 30px;
-}
-
-#results h2 {
-  height: 100px;
-  background-color: rgb(88, 88, 88);
-  color: white;
-  font-size: 30px;
-  line-height: 100px;
-}
-
-#results h3 {
-  margin-top: 20px;
-  font-size: 24px;
-  color: white;
-  text-shadow: 2px 2px rgb(33, 33, 33);
-}
-
-#results h4 {
-  margin-top: 15px;
-  font-size: 20px;
-  font-style: italic;
-  color: rgb(20, 20, 20);
-}
-
-#results p {
-  color: black
-}
-
-#results-div section {
-  margin: auto;
-  height: 850px;
-  background-color: rgb(221, 221, 221);
-  margin-top: 70px;
-  width: 630px;
-  box-shadow: 3px 5px 15px rgba(0, 0, 0, .50);
-
-}
-
-#results img {
-  margin: auto;
-  padding-top: 35px;
-  display: block;
-  text-align: center;
-  width: 350px
-}
-
-#results p {
-  margin-top: 20px;
-  padding: 20px 80px;
-  line-height: 24px;
-  height: 150px;
-  overflow: auto;
-  text-align: left;
-  text-indent: 2em;
-}
-
-
 /* NEW */
 
-/* MAIN DIV FOR TOP BOXES */
+/* MAIN FLEX FOR PAGE */
 #new {
+  margin: auto;
   display: flex;
   flex-direction: column;
   text-align: center;
   width: 960px;
-  margin: auto;
 }
 
 /* STYLE FOR TOP BAR */
 #new h1, #new p {
-  height: 100px;
-  line-height: 125px;
-  font-size: 40px;
   background-color: rgb(255, 255, 255);
   color: rgb(199, 93, 248);
   box-shadow: 0 0 35px rgb(255, 255, 255);
+  height: 100px;
+  line-height: 100px;
+  font-size: 60px;
 }
 
 /* BOOK APP TEXT */
@@ -143,24 +53,30 @@
 
 /* ENTER TITLE OR AUTHOR BOX */
 #new input[type="text"] {
-  margin-top: 30px;
-  font-size: 30px;
-  padding: 30px 300px;
   text-align: center;
   display: flex;
   border-radius: 50px;
   border: none;
+  margin-top: 30px;
+  font-size: 30px;
+  padding: 30px 300px;
 }
 
 /* INPUTS - TITLE OR AUTHOR */
 #new #title, #new #author {
+  background-color: rgb(255, 255, 255);
   font-size: 35px;
   margin-top: 25px;
   border-radius: 50px;
   padding: 30px 150px;
-  background-color: rgb(255, 255, 255);
 }
 
+/* TITLE OR AUTHOR TEXT */
+#new label {
+  color: rgb(60, 4, 87)
+}
+
+/* SEARCH BUTTON */
 #new input[type="submit"] {
   border-radius: 75px;
   background-color: rgb(60, 4, 87);
@@ -174,12 +90,117 @@
   border: none;
 }
 
+/* SEARCH BUTTON HOVER */
 #new input[type="submit"]:hover {
   color:rgb(255, 187, 0);
   transition: 900ms;
   cursor: pointer;
 }
 
-#new label {
-  color: rgb(60, 4, 87)
+/* SOCIAL MEDIA FOOTER */
+footer {
+  margin-top: 20px;
+  font-family: 'Yusei Magic', sans-serif;
 }
+
+
+/* RESULTS */
+
+/* MAIN FLEX FOR PAGE */
+#results {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 960px;
+  margin: auto;
+}
+
+/* TOP BAR HEADER */
+#results nav {
+  display: flex;
+  color: rgb(199, 93, 248);
+  background-color: rgb(255, 255, 255);
+  font-size: 60px;
+  line-height: 100px;
+  height: 100px;
+}
+
+/* BOX-SHADOW FOR TOP BAR */
+#results h1 #results #menu {
+  box-shadow: 0 0 35px rgb(255, 255, 255);
+}
+
+/* TOP BAR TEXT */
+#results h1 {
+  text-align: left;
+  padding-left: 25px;
+  flex-grow: 2;
+}
+
+/* HAMBURGER MENU */
+#results #menu {
+  text-align: right;
+  padding-right: 30px;
+  color: rgb(199, 93, 248);
+}
+
+/* STYLE FOR 2ND HEAD-BAR */
+#results h2 {
+  background-color: rgb(60, 4, 87);
+  color: white;
+  box-shadow: 0 0 35px rgb(255, 255, 255);
+  font-size: 30px;
+  line-height: 100px;
+  height: 100px; 
+}
+
+#results nav {
+  display: flex;
+}
+
+/* BOOK TITLE */
+#results h3 {
+  font-size: 25px;
+  margin-top: 20px;
+  color: white;
+}
+
+/* AUTHOR NAME */
+#results h4 {
+  font-size: 15px;
+  font-style: bold;
+  margin-top: 15px;
+  color: rgb(60, 4, 87);
+}
+
+/* RESULTS BOXES */
+#results-div section {
+  margin: auto;
+  height: 850px;
+  margin-top: 70px;
+  width: 630px;
+  background-color: rgb(220, 149, 255);
+  box-shadow: 3px 5px 20px rgb(255, 255, 255);
+}
+
+/* RESULTS BOOK IMAGE */
+#results img {
+  margin: auto;
+  padding-top: 35px;
+  display: block;
+  text-align: center;
+  width: 350px
+}
+
+/* SUMMARY TEXT + BOX */
+#results p {
+  color: rgb(60, 4, 87);
+  overflow: auto;
+  text-align: left;
+  margin-top: 20px;
+  padding: 20px 80px;
+  line-height: 24px;
+  height: 150px;
+  text-indent: 2em;
+}
+

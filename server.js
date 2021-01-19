@@ -19,6 +19,7 @@ app.post('/newSearches', searchHandler);
 app.get('*', (request, response) => response.status(404).send('This route does not exist'));
 
 // HANDLER FUNCTIONS
+// FUNCTION FOR SEARCH PAGE
 function homeHandler(req, res) {
   res.status(200).render('pages/searches/new')
     .catch(() => {
@@ -26,6 +27,7 @@ function homeHandler(req, res) {
     });
 }
 
+// FUNCTION FOR SEARCH RESULTS PAGE
 function searchHandler(req, res) {
 
   let url = `https://www.googleapis.com/books/v1/volumes?q=`;
@@ -60,7 +62,7 @@ function handleError(res){
 function Book(data) {
   this.title = data.volumeInfo.title;
   this.author = data.volumeInfo.authors;
-  this.description = data.volumeInfo.description || '*** Description current unavailable ***';
+  this.description = data.volumeInfo.description
   this.thumbnail = data.volumeInfo.imageLinks.thumbnail || null;
 }
 
