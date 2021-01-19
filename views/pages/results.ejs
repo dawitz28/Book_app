@@ -14,25 +14,27 @@
 
 <body id="results">
   <nav>
-    <h1>Book App</h1>
+    <h1>BOOK APP</h1>
     <p id="menu"> ■ </p>
   </nav>
-  <h2>Search Results</h2>
+
+  <h2>• SEARCH RESULTS •</h2>
+  
   <div id="results-div">
     <% data.forEach(value => { %>
     <section>
       <img src="<%= value.thumbnail%>" alt="<%= value.title%>">
       <h3><%= value.title%></h3>
-      <h4><%= value.author%></h4>
+      <h4>• <%= value.author%> •</h4>
       <p><%= value.description%></p>
     </section>
     <%})%>
   </div>
+  
   <footer>
+    <a href="">Instagram</a>
     <a href="">Twitter</a>
     <a href="">Facebook</a>
-    <a href="">Instagram</a>
-    <a href="">Other</a>
   </footer>
 </body>
 
