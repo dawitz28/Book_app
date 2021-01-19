@@ -1,32 +1,46 @@
 # Book_app
-# Project Name
 
-**Author**: Your Name Goes Here
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Author**: Dawit Ayana & Ryan Tipper
+**Version**: 1.0.0
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code 301 class. (i.e. What's your problem domain?) -->
+An app that allows users to input a request to a google books API, searching either by author or by 
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+Setting up repo
+Copy over Trello board
+Set up Heroku
+Pull down code
+Ref. demo/starter code from in-class
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+GitHub
+Trello
+Heroku
+Google Books API
+EJS | JS | Node | CSS
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
+01-16-21 5PM - Repo created, app running with starter JS + API and EJS/CSS files
+01-18-21 10PM - EJS and server.js corrected + CSS for all pages added along with mobile first
 
 ## Credits and Collaborations
 
 
-Number and name of feature: ________________________________
+Number and name of feature: 1 -- Lab 11 (Repo Setup + API and CSS)
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 5 hours
 
-Start time: _____
+Start time: 130PM (1/16)
 
-Finish time: _____
+Finish time: 5PM (1/16)
 
-Actual time needed to complete: _____
+Actual time needed to complete: null
+
+Estimate of time needed to complete: 3 hours
+
+Start time: 430PM (1/18)
+
+Finish time: 10PM (1/18 -- paused work for class)
+
+Actual time needed to complete: 8 total hours between Sat/Mon
