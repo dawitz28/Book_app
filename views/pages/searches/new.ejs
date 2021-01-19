@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/reset.css" type="text/css">
+  <link rel="stylesheet" href="/styles/base.css" type="text/css">
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+  <title>Booklist App</title>
+</head>
+
+<body id="new">
+  <nav>
+    <h1>BOOK APP</h1>
+    <p id="menu"> ■ </p>
+  </nav>
+
+  <h2>• SEARCH BY TITLE OR AUTHOR •</h2>
+  <form action="/newSearches" method="POST">
+    <input type="text" name="search" id="" placeholder="enter title or author">
+    
+    <div id="title">
+      <label for="title">TITLE</label>
+      <input type="radio" id="title" value="title" name="keyword">
+    </div>
+    
+    <div id="author">
+      <label for="author">AUTHOR</label>
+      <input type="radio" id="author" value="author" name="keyword">
+    </div>
+    <div id="submitBooks">
+      <input type="submit" value="SEARCH">
+    </div>
+  </form>
+  <footer></footer>
+</body>
+
+</html>

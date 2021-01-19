@@ -1,3 +1,20 @@
-* {
-  background-color: aqua;
+/* MOBILE */
+body {
+  width: 480px;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 100px;
+  font-family: 'Yusei Magic', sans-serif;
+  color: rgba(28, 28, 28, 0.793);
+  background-color: rgba(128, 11, 238, 0.799);
+  color: whitesmoke
+}
+
+/* DESKTOP */
+@media (min-width: 1025px){
+  body {
+    min-width: 960px;
+    margin: auto;
+    margin-top: 100px;
+  }
 }
