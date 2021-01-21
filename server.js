@@ -25,12 +25,34 @@ app.set('view engine', 'ejs');
 app.get('/', homeHandler);
 app.post('/newSearches', searchHandler);
 // app.get('/search', newsearches) need to be added. 
+// app.get ('/books/:book_id', getoneBook); this will connect to index.ejs books data/ more than 1 view details line 35 & 44 
 
 // CATCH-ALL
 app.get('*', (request, response) => response.status(404).send('This route does not exist'));
 
 // HANDLER FUNCTIONS
 // FUNCTION FOR SEARCH PAGE
+// function getBooks(req, res) {
+//   //talking to our database
+//   const  SQL = 'SELECT * FROM books;';
+//   return client.query(SQL)
+//   .then(results => {
+//     console.log(results.row);
+//     res.render('index', {data: results.rows});
+//   });
+// }
+// function getoneBook(req, res){
+//   console.log(req.params);
+//   const SQL = 'SELECT * FROM Books WHERE id = $1';
+//   const values = [req.parms.books_id];
+
+//   client.query(SQL, values)
+//   .then(results => {
+//     console.log(results.rows[0]);
+        // res.render('pages/detail-view', {data: results.rows[0]});
+//   });
+// }
+
 function homeHandler(req, res) {
   res.status(200).render('pages/searches/new')
   //res.status(200).render('index');
