@@ -24,6 +24,7 @@ EJS | JS | Node | CSS
 01-16-21 5PM - Repo created, app running with starter JS + API and EJS/CSS files
 01-18-21 10PM - EJS and server.js corrected + CSS for all pages added along with mobile first
 01-19-21 840AM - Finished styling of results page to match search page CSS
+01-20-21 945PM - Added in both SQL schema and seed files + got database created via terminal called "bookapp"
 
 ## Credits and Collaborations
 
