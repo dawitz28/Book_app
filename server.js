@@ -3,17 +3,28 @@
 // DEPENDENCIES
 const express = require('express');
 const superagent = require('superagent');
+const pg = require('pg');
+const cors = require('cors');
 
-// START APPLICATION
+// START OUR APPLICATION
 const app = express();
+app.use(cors() );
 const PORT = process.env.PORT || 3000;
+
+//CREATE MY DATABASE CONNECTION 
+client.on('error', error => console.error(error));
+
+// EXPRESS MIDDLEWARE
 app.use(express.static('./public'));
 app.use(express.urlencoded({ extended: true }));
+
+//SET THE VIEW ENGINE FOR SERVER-SIDE RENDERING
 app.set('view engine', 'ejs');
 
 // ROUTES
 app.get('/', homeHandler);
 app.post('/newSearches', searchHandler);
+// app.get('/search', newsearches) need to be added. 
 
 // CATCH-ALL
 app.get('*', (request, response) => response.status(404).send('This route does not exist'));
@@ -22,6 +33,7 @@ app.get('*', (request, response) => response.status(404).send('This route does n
 // FUNCTION FOR SEARCH PAGE
 function homeHandler(req, res) {
   res.status(200).render('pages/searches/new')
+  //res.status(200).render('index');
     .catch(() => {
       handleError(res);
     });
@@ -62,11 +74,15 @@ function handleError(res){
 function Book(data) {
   this.title = data.volumeInfo.title;
   this.author = data.volumeInfo.authors;
-  this.description = data.volumeInfo.description
+  this.description = data.volumeInfo.description;
   this.thumbnail = data.volumeInfo.imageLinks.thumbnail || null;
 }
 
-// PORT LISTENING
-app.listen(PORT, () => {
-  console.log(`Listening on port: ${PORT}`);
-});
+// PORT LISTENING / START OUR SERVER 
+client.connect()
+.then(() => {
+  app.listen(PORT, () => {
+    console.log(`Listening on port: ${PORT}`);
+  });
+
+})
