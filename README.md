@@ -46,3 +46,20 @@ Start time: 430PM (1/18)
 Finish time: 10PM (1/18 -- paused work for class)
 
 Actual time needed to complete: 8 total hours between Sat/Mon
+
+-----
+Number and name of feature: 2 -- Lab 12 Components & Forms
+
+Estimate of time needed to complete: 6 hours
+
+Start time: 730PM (1/20)
+
+Finish time: 9:45 PM (1/20)
+
+Actual time needed to complete: null
+
+Start time:
+
+Finish time: 
+
+Actual time needed to complete: null
