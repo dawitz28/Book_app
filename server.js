@@ -12,6 +12,7 @@ app.use(cors() );
 const PORT = process.env.PORT || 3000;
 
 //CREATE MY DATABASE CONNECTION 
+const client = new pg.Client(process.env.DATABASE_URL);
 client.on('error', error => console.error(error));
 
 // EXPRESS MIDDLEWARE
@@ -22,43 +23,38 @@ app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 // ROUTES
-app.get('/', homeHandler);
+app.get('/', getBooks);
 app.post('/newSearches', searchHandler);
+app.get ('/books/:book_id', getoneBook); //this will connect to index.ejs books data/ more than 1 view details line 35 & 44 
 // app.get('/search', newsearches) need to be added. 
-// app.get ('/books/:book_id', getoneBook); this will connect to index.ejs books data/ more than 1 view details line 35 & 44 
 
 // CATCH-ALL
 app.get('*', (request, response) => response.status(404).send('This route does not exist'));
 
 // HANDLER FUNCTIONS
 // FUNCTION FOR SEARCH PAGE
-// function getBooks(req, res) {
-//   //talking to our database
-//   const  SQL = 'SELECT * FROM books;';
-//   return client.query(SQL)
-//   .then(results => {
-//     console.log(results.row);
-//     res.render('index', {data: results.rows});
-//   });
-// }
-// function getoneBook(req, res){
-//   console.log(req.params);
-//   const SQL = 'SELECT * FROM Books WHERE id = $1';
-//   const values = [req.parms.books_id];
-
-//   client.query(SQL, values)
-//   .then(results => {
-//     console.log(results.rows[0]);
-        // res.render('pages/detail-view', {data: results.rows[0]});
-//   });
-// }
-
-function homeHandler(req, res) {
-  res.status(200).render('pages/searches/new')
-  //res.status(200).render('index');
-    .catch(() => {
-      handleError(res);
-    });
+function getBooks(req, res) {
+  //talking to our database
+  const  SQL = 'SELECT * FROM books;';
+  return client.query(SQL)
+  .then(results => {
+    console.log(results.row);
+    res.render('index', {data: results.rows});
+  });
+}
+function getoneBook(req, res){
+  console.log(req.params);
+  const SQL = 'SELECT * FROM Books WHERE id = $1';
+  const values = [req.parms.books_id];
+  
+  client.query(SQL, values)
+  .then(results => {
+    console.log(results.rows[0]);
+    res.render('pages/detail-view', {data: results.rows[0]});
+  })
+  .catch(() => {
+    handleError(res);
+  }); 
 }
 
 // FUNCTION FOR SEARCH RESULTS PAGE
@@ -106,5 +102,4 @@ client.connect()
   app.listen(PORT, () => {
     console.log(`Listening on port: ${PORT}`);
   });
-
 })
