@@ -5,10 +5,12 @@ const express = require('express');
 const superagent = require('superagent');
 const pg = require('pg');
 const cors = require('cors');
+const dotenv = require('dotenv');
 
 // START OUR APPLICATION
 const app = express();
 app.use(cors() );
+dotenv.config();
 const PORT = process.env.PORT || 3000;
 
 //CREATE MY DATABASE CONNECTION 
@@ -64,7 +66,6 @@ function searchHandler(req, res) {
   if (req.body.keyword === 'title') {
     url += `+intitle:${req.body.search}`;
   }
-
   if (req.body.keyword === 'author') {
     url += `+inauthor:${req.body.search}`;
   }
@@ -99,6 +100,7 @@ function Book(data) {
 // PORT LISTENING / START OUR SERVER 
 client.connect()
 .then(() => {
+
   app.listen(PORT, () => {
     console.log(`Listening on port: ${PORT}`);
   });
