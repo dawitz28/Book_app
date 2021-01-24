@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+  <%- include('books/head') %>
+</head>
+
+
+<div id="container">
+
+  <body id="results">
+    <%- include('books/navbar') %>
+    <div id="show-div">
+      <form action="/update/<%= data.id %>?_method=PUT" method="POST">
+        <input type="text" name="title" value="<%= data.title %>">
+        <input type="text" name="author" value="<%= data.author %>">
+        <input type="text" name="isbn" value="<%= data.isbn %>">
+        <input type="text" name="thumbnail" value="<%= data.thumbnail %>">
+        <input type="text" name="bookshelf" value="<%= data.bookshelf %>">
+        <input type="text" name="description" value="<%= data.description %>">
+        <input type="hidden" name="id" value="<%= data.id %>">
+        <button>Update</button>
+      </form>
+    </div>
+    <%- include('books/footer') %>
+  </body>
+  
+</div>
+
+</html>

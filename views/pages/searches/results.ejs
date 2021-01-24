@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+  <%- include('../books/head') %>
+</head>
+
+
+<div id="container">
+
+  <body id="results">
+  <%- include('../books/nav') %>
+  <h2> <%= data.length %> Search Results</h2>
+  <!-- <p><a href="/newSearch">New Search</a></p>
+    <p><a href="/">Home</a></p> -->
+  <div id="results-div">
+
+    <% data.forEach(value => { %>
+    <section>
+      <img src="<%= value.thumbnail%>" alt="<%= value.title%>">
+      <h3><%= value.title%></h3>
+      <h4><%= value.author%></h4>
+      <p><%= value.description%></p>
+      <form action="/books" method="POST">
+        <input id="details"type="submit" value="Add to Favorites">
+        <input class="formData" type="text" name="title" value="<%= value.title%>">
+        <input class="formData" type="text" name="author" value="<%= value.author%>">
+        <input class="formData" type="text" name="description" value="<%= value.description%>">
+        <input class="formData" type="text" name="thumbnail" value="<%= value.thumbnail%>">
+        <input class="formData" type="text" name="isbn" value="<%= value.isbn%>">
+        <input class="formData" type="text" name="bookshelf" value="<%= value.bookshelf%>">
+      </form>
+    </section>
+    <%})%>
+  </div>
+  <%- include('../books/footer') %>
+  </body>
+</div>
+
+
+</html>
