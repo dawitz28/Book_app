@@ -1,3 +1,25 @@
+/* INDEX HOME PAGE */
+
+/* HEADLINE TEXT */
+#index h1 {
+  font-family: 'Yusei Magic', sans-serif;
+  font-size: 225px;
+  margin: auto;
+  display: flex;
+}
+
+/* API SEARCH LINK */
+#index #searchbox {
+    color: white;
+    padding: 25px 10px;
+    cursor: pointer;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    border: none;
+    width: 300px;
+    display: flex;
+}
+
 /* NEW */
 
 /* MAIN FLEX FOR PAGE */
@@ -49,6 +71,7 @@
 #new input[type="text"], #new input[type="submit"] {
   display: block;
   margin: auto;
+  font-family: 'Bebas Neue', cursive;
 }
 
 /* ENTER TITLE OR AUTHOR BOX */
@@ -84,9 +107,9 @@
   padding: 40px 100px;
   cursor: pointer;
   box-shadow: 0 0 10px rgb(255, 255, 255);
-  font-family: 'Yusei Magic', sans-serif;
+  font-family: 'Bebas Neue', cursive;
   margin-top: 35px;
-  font-size: 65px;
+  font-size: 75px;
   border: none;
 }
 
