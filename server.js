@@ -31,7 +31,7 @@ app.use(methodOverride('_method'));
 // ROUTES
 app.get('/', getBooks);
 app.get('/books/:id', bookDetails);
-app.post('/apiSearch', apiSearchHandler);
+app.post('/bookSearch', bookSearchHandler);
 app.get('/newSearches', newSearchHandler); 
 app.post('/books', booksHandler);
 app.get('/edit/:id', editHandler);
@@ -119,7 +119,7 @@ function newSearchHandler(req, res) {
 }
 
 // FUNCTION FOR SEARCH RESULTS PAGE
-function apiSearchHandler(req, res) {
+function bookSearchHandler(req, res) {
 
   let url = `https://www.googleapis.com/books/v1/volumes?q=`;
   if (req.body.keyword === 'title') {
