@@ -1,0 +1,26 @@
+
+  
+<html lang="en">
+  <head>
+    <% include('./layout/head') %>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- <p><a href="/searches">Search</a></p> -->
+    <a href="/searches">Search</a>
+
+    <section>
+      <h1>My Book</h1>
+      <% data.forEach(info => { %>
+        <ul>
+          <li>Title: <%= book.title %></li>
+          <li>Status:<%= book.status %></li>
+          <a href="/books/<%= book.id %>">View Details</a>
+          <a> View Details</a>
+        </ul>
+      <% }) %>
+    </section>
+    <!-- the properties from My Books object should list for each book.   -->
+  </body>
+  </html>

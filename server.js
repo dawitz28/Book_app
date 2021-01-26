@@ -176,6 +176,7 @@ function Book(data) {
 // PORT LISTENING / START OUR SERVER 
 client.connect()
 .then(() => {
+
   app.listen(PORT, () => {
     console.log(`Listening on port: ${PORT}`);
   });
