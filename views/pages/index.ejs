@@ -1,0 +1,23 @@
+
+<html lang="en">
+
+  <head>
+    <%- include('books/head') %>
+  </head>
+  
+  <div id="container">
+  
+    <body id="index">
+      <div id="searchBox">
+        <p id="searchLink"><a href="/newSearches">SEARCH BOOKS HERE</a></p>
+      </div>
+      <div id="index-div">
+        <% data.forEach(value => { %>
+        <section>
+        </section>
+        <%})%>
+      </div>
+      <%- include('books/footer') %>
+    </body>
+  </div>
+  </html>

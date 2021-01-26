@@ -1,7 +1,17 @@
 INSERT INTO books (
-  author,
   title,
+  author,
+  description,
   isbn,
-  image_url,
-  description
-) VALUES ( 'ryan tipper', 'princess emma & the orb of time', 'ISBN_9781986945042', 'TBD', 'TBD');
+  thumbnail,
+  bookshelf,
+) VALUES ( 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD');
+
+INSERT INTO books (
+  title,
+  author,
+  description,
+  isbn,
+  thumbnail,
+  bookshelf,
+) VALUES ( 'TBD', 'TBD', 'TBD', 'TBD', 'TBD', 'TBD');
